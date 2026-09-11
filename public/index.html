@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>ATTACHED SHEET SA-EX-260096 - Excel</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23217346'/><text x='16' y='23' font-size='20' fill='white' text-anchor='middle' font-family='Arial'>X</text></svg>">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ================= STEALTH (คอม) ================= -->
+<div id="xl">
+  <div class="titlebar">
+    <span class="qa">💾 ↩ ↪ ▾</span>
+    <span class="ttl">ATTACHED SHEET SA-EX-260096 - Excel</span>
+    <span class="win">— ▢ ✕</span>
+  </div>
+  <div class="ribbon">
+    <span class="tab">File</span><span class="tab act">Home</span><span class="tab">Insert</span>
+    <span class="tab">Page Layout</span><span class="tab">Formulas</span><span class="tab">Data</span>
+    <span class="tab">Review</span><span class="tab">View</span><span class="tab">Help</span><span class="tab">Acrobat</span>
+  </div>
+  <div class="ribbonbody">
+    <div class="grp"><b>Clipboard</b><span>Paste ▾ ✂ ⧉</span></div>
+    <div class="grp"><b>Font</b><span>Tahoma ▾ 11 ▾ B I U</span></div>
+    <div class="grp"><b>Alignment</b><span>≡ ≡ ≡ ⤢</span></div>
+    <div class="grp"><b>Number</b><span>General ▾ % , .00</span></div>
+    <div class="grp"><b>Styles</b><span>Conditional Formatting ▾</span></div>
+    <div class="grp"><b>Cells</b><span>Insert Delete Format</span></div>
+  </div>
+  <div class="fbar">
+    <input id="namebox" class="namebox" value="SA-EX-260096" title="Name Box">
+    <span class="fx">✕ ✓ <i>fx</i></span>
+    <input id="fx" class="fxin" autocomplete="off" spellcheck="false" placeholder="">
+  </div>
+
+  <div class="sheetwrap">
+    <table id="grid"></table>
+    <div id="chartbox">
+      <div class="ctitle">Production Trend (Q3) — linked data</div>
+      <canvas id="cx" width="460" height="190"></canvas>
+      <div class="cfoot"><span id="clegend">Series1 · Series2</span></div>
+    </div>
+  </div>
+
+  <div class="tabs">
+    <span class="nav">◀ ▶</span>
+    <span class="st">11.NOV'25</span><span class="st">10.OCT'25</span><span class="st">9.SEP'25</span>
+    <span class="st">8.AUG'26_OL</span><span class="st">7.JUL'26_OL</span><span class="st act" id="sheetact">6.JUN'26_OL</span>
+    <span class="st">5.MAY'26_OL</span><span class="plus">＋</span>
+  </div>
+  <div class="status">
+    <span>Ready</span>
+    <span id="stat2"></span>
+    <span class="right">⊞ ▤ ⌸ &nbsp; — ▬▬▬ ＋ &nbsp; <b id="zoom">85%</b></span>
+  </div>
+</div>
+
+<!-- ================= FULL (มือถือ) ================= -->
+<div id="mob">
+  <header>
+    <div class="brand">🎮 <b id="mroom">SA-EX-260096</b></div>
+    <div class="sc" id="mscore">0 - 0</div>
+  </header>
+
+  <nav id="mtabs">
+    <button data-g="shot" class="on">🪨 ยิงหิน</button>
+    <button data-g="uno">🃏 UNO</button>
+    <button data-g="find">🔢 FIND</button>
+    <button data-g="chat">💬 แชท</button>
+  </nav>
+
+  <section id="p-shot" class="pane on">
+    <canvas id="mc" width="1000" height="520"></canvas>
+    <div class="hud">
+      <div class="row">
+        <div class="pill">องศา <b id="ha">45</b>°</div>
+        <div class="pill">แรง <b id="hp">60</b></div>
+        <div class="pill" id="hw">ลม 0</div>
+        <div class="pill" id="ht">รอเริ่ม</div>
+      </div>
+      <input id="sa" type="range" min="1" max="89" value="45">
+      <input id="sp" type="range" min="5" max="100" value="60">
+      <div class="balls" id="balls"></div>
+      <div class="row">
+        <button id="fire" class="big">🔥 ยิง!</button>
+        <button id="newshot" class="ghost">เริ่มใหม่</button>
+      </div>
+    </div>
+  </section>
+
+  <section id="p-uno" class="pane">
+    <div class="unotop">
+      <div id="utop" class="card big"></div>
+      <div class="uinfo">
+        <div>สีปัจจุบัน: <b id="ucolor">-</b></div>
+        <div>ไพ่ฝั่งตรงข้าม: <b id="uopp">0</b></div>
+        <div id="uturn" class="turn">-</div>
+      </div>
+    </div>
+    <div id="uhand" class="hand"></div>
+    <div class="row">
+      <button id="udraw">🃏 จั่ว</button>
+      <button id="unew" class="ghost">เริ่มใหม่</button>
+    </div>
+  </section>
+
+  <section id="p-find" class="pane">
+    <div class="findhead">หาเลข <b id="ftar">----</b> <span id="fround"></span></div>
+    <div id="fgrid" class="fgrid"></div>
+    <button id="fnew" class="ghost">เริ่มใหม่</button>
+  </section>
+
+  <section id="p-chat" class="pane">
+    <div id="mchat" class="chatbox"></div>
+    <div class="row"><input id="mchatin" placeholder="พิมพ์ข้อความ..."><button id="msend">ส่ง</button></div>
+  </section>
+</div>
+
+<div id="join">
+  <div class="jbox">
+    <h2>OL_Newmodel</h2>
+    <label>ชื่อเล่น<input id="jname" maxlength="14" value=""></label>
+    <label>รหัสห้อง (ต้องตรงกันทั้ง 2 เครื่อง)<input id="jroom" value="SA-EX-260096"></label>
+    <button id="jgo">เข้าห้อง</button>
+    <p class="hint">เปิดลิงก์เดียวกันทั้งคอมและมือถือ → คอมจะขึ้นเป็น Excel อัตโนมัติ</p>
+  </div>
+</div>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
