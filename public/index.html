@@ -30,9 +30,9 @@
     <div class="grp"><b>Cells</b><span>Insert Delete Format</span></div>
   </div>
   <div class="fbar">
-    <input id="namebox" class="namebox" value="SA-EX-260096" title="Name Box">
+    <input id="namebox" class="namebox" value="SA-EX-260096" title="Name Box" spellcheck="false">
     <span class="fx">✕ ✓ <i>fx</i></span>
-    <input id="fx" class="fxin" autocomplete="off" spellcheck="false" placeholder="">
+    <input id="fx" class="fxin" autocomplete="off" spellcheck="false">
   </div>
 
   <div class="sheetwrap">
@@ -41,27 +41,33 @@
       <div class="ctitle">Production Trend (Q3) — linked data</div>
       <canvas id="cx" width="460" height="190"></canvas>
       <div class="cfoot"><span id="clegend">Series1 · Series2</span></div>
+      <div id="qrwrap">
+        <canvas id="qr" width="150" height="150"></canvas>
+        <div class="qcap">DOC-ID / ASSET TAG</div>
+      </div>
     </div>
   </div>
 
   <div class="tabs">
     <span class="nav">◀ ▶</span>
     <span class="st">11.NOV'25</span><span class="st">10.OCT'25</span><span class="st">9.SEP'25</span>
-    <span class="st">8.AUG'26_OL</span><span class="st">7.JUL'26_OL</span><span class="st act" id="sheetact">6.JUN'26_OL</span>
+    <span class="st">8.AUG'26_OL</span><span class="st">7.JUL'26_OL</span><span class="st act">6.JUN'26_OL</span>
     <span class="st">5.MAY'26_OL</span><span class="plus">＋</span>
   </div>
   <div class="status">
-    <span>Ready</span>
-    <span id="stat2"></span>
-    <span class="right">⊞ ▤ ⌸ &nbsp; — ▬▬▬ ＋ &nbsp; <b id="zoom">85%</b></span>
+    <span>Ready</span><span id="stat2"></span>
+    <span class="right">⊞ ▤ ⌸ &nbsp; — ▬▬▬ ＋ &nbsp; <b>85%</b></span>
   </div>
 </div>
 
 <!-- ================= FULL (มือถือ) ================= -->
 <div id="mob">
   <header>
-    <div class="brand">🎮 <b id="mroom">SA-EX-260096</b></div>
-    <div class="sc" id="mscore">0 - 0</div>
+    <div class="brand">🎮 <b id="mroom">-</b> <span id="mlock"></span></div>
+    <div class="hgrp">
+      <button id="mshare" class="tiny">แชร์</button>
+      <div class="sc" id="mscore">0 - 0</div>
+    </div>
   </header>
 
   <nav id="mtabs">
@@ -99,6 +105,11 @@
         <div id="uturn" class="turn">-</div>
       </div>
     </div>
+    <div id="wildpick" class="wild">
+      เลือกสี:
+      <button data-w="R" class="wR">แดง</button><button data-w="G" class="wG">เขียว</button>
+      <button data-w="B" class="wB">น้ำเงิน</button><button data-w="Y" class="wY">เหลือง</button>
+    </div>
     <div id="uhand" class="hand"></div>
     <div class="row">
       <button id="udraw">🃏 จั่ว</button>
@@ -121,10 +132,12 @@
 <div id="join">
   <div class="jbox">
     <h2>OL_Newmodel</h2>
-    <label>ชื่อเล่น<input id="jname" maxlength="14" value=""></label>
-    <label>รหัสห้อง (ต้องตรงกันทั้ง 2 เครื่อง)<input id="jroom" value="SA-EX-260096"></label>
+    <div id="jerr" class="jerr"></div>
+    <label>ชื่อเล่น<input id="jname" maxlength="14" value="MOBILE"></label>
+    <label>รหัสห้อง<input id="jroom" value="SA-EX-260096" spellcheck="false"></label>
+    <label>PIN (ใส่ให้ตรงกัน 2 เครื่อง)<input id="jpin" value="" inputmode="numeric" placeholder="เช่น 2609"></label>
     <button id="jgo">เข้าห้อง</button>
-    <p class="hint">เปิดลิงก์เดียวกันทั้งคอมและมือถือ → คอมจะขึ้นเป็น Excel อัตโนมัติ</p>
+    <p class="hint">วิธีง่ายสุด: สแกน QR จากคอม (Ctrl+Alt+Q) แล้วเข้าได้ทันทีไม่ต้องพิมพ์</p>
   </div>
 </div>
 
