@@ -1,0 +1,94 @@
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;font-family:Tahoma,"Segoe UI",sans-serif}
+body{overflow:hidden;background:#fff}
+#xl,#mob{display:none;height:100%}
+body.stealth #xl{display:flex;flex-direction:column}
+body.full #mob{display:flex;flex-direction:column;height:100%}
+
+/* ---------- EXCEL SKIN ---------- */
+#xl{font-size:12px;color:#222;background:#f3f2f1}
+.titlebar{display:flex;align-items:center;gap:14px;background:#217346;color:#fff;padding:4px 10px;font-size:12px}
+.titlebar .ttl{flex:1;text-align:center}
+.titlebar .win{letter-spacing:6px}
+.ribbon{display:flex;gap:2px;background:#217346;padding:0 8px}
+.ribbon .tab{padding:5px 11px;color:#e8f3ec;font-size:12px}
+.ribbon .tab.act{background:#f3f2f1;color:#217346;border-radius:4px 4px 0 0}
+.ribbonbody{display:flex;gap:0;background:#f3f2f1;border-bottom:1px solid #d6d6d6;padding:6px 8px}
+.grp{padding:0 14px;border-right:1px solid #e1e1e1;font-size:11px;color:#555;min-width:110px}
+.grp b{display:block;color:#888;font-weight:400;font-size:10px;margin-top:16px}
+.fbar{display:flex;align-items:center;gap:6px;background:#fff;border-bottom:1px solid #d6d6d6;padding:3px 6px}
+.namebox{width:150px;border:1px solid #d6d6d6;padding:3px 6px;font-size:12px}
+.fx{color:#666;padding:0 6px}
+.fx i{font-family:Georgia,serif}
+.fxin{flex:1;border:1px solid #fff;border-left:1px solid #d6d6d6;padding:3px 8px;font-size:12px;outline:none}
+.fxin:focus{border-color:#d6d6d6}
+.sheetwrap{flex:1;overflow:auto;background:#fff;position:relative}
+#grid{border-collapse:collapse;font-size:11.5px;table-layout:fixed}
+#grid td,#grid th{border:1px solid #e3e3e3;height:19px;padding:0 4px;white-space:nowrap;overflow:hidden;font-weight:400}
+#grid th{background:#f5f5f5;color:#444;text-align:center;font-size:11px;border-color:#d6d6d6}
+#grid td.rh{background:#f5f5f5;text-align:center;color:#555;width:34px;border-color:#d6d6d6}
+#grid td.sel{outline:2px solid #217346;outline-offset:-2px}
+#grid td.hd{background:#dbe5f1;font-weight:700;text-align:center}
+#grid td.pk{background:#f2c9e0}
+#grid td.gn{background:#c6e0b4}
+#grid td.or{background:#fce4d6}
+#grid td.play{cursor:pointer}
+#grid td.play:hover{background:#eaf3ea}
+#grid td.hot{background:#fff2cc}
+#grid td.dim{color:#9a9a9a}
+#chartbox{position:absolute;right:18px;bottom:14px;width:470px;background:#fff;border:1px solid #d9d9d9;padding:6px 8px 4px;opacity:.9}
+#chartbox .ctitle{font-size:10.5px;color:#7a7a7a;text-align:center;margin-bottom:2px}
+#chartbox .cfoot{font-size:9.5px;color:#9a9a9a;text-align:center}
+body.boss #chartbox{display:none}
+body.boss #grid td.hot,body.boss #grid td.play{background:none}
+.tabs{display:flex;align-items:center;gap:3px;background:#f3f2f1;border-top:1px solid #d6d6d6;padding:3px 8px;font-size:11px}
+.tabs .st{padding:3px 10px;background:#fff;border:1px solid #d6d6d6;border-bottom:none;color:#444}
+.tabs .st.act{font-weight:700;color:#217346;border-top:2px solid #217346}
+.tabs .nav,.tabs .plus{color:#777;padding:0 6px}
+.status{display:flex;gap:18px;align-items:center;background:#f3f2f1;border-top:1px solid #d6d6d6;padding:3px 10px;font-size:11px;color:#444}
+.status .right{margin-left:auto;letter-spacing:2px}
+
+/* ---------- MOBILE SKIN ---------- */
+#mob{background:#10131a;color:#e8ecf4;font-size:15px}
+#mob header{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:#161b26}
+#mob .sc{background:#222a3a;padding:4px 12px;border-radius:20px;font-weight:700}
+#mtabs{display:flex;background:#161b26;border-bottom:1px solid #232b3b}
+#mtabs button{flex:1;background:none;border:none;color:#8e99ad;padding:11px 0;font-size:13px}
+#mtabs button.on{color:#6ee7a8;border-bottom:2px solid #6ee7a8}
+.pane{display:none;flex:1;overflow:auto;padding:12px}
+.pane.on{display:block}
+#mc{width:100%;background:#0b1020;border-radius:12px;touch-action:none}
+.hud{margin-top:10px}
+.row{display:flex;gap:8px;align-items:center;margin:8px 0;flex-wrap:wrap}
+.pill{background:#1b2232;padding:6px 12px;border-radius:20px;font-size:13px}
+input[type=range]{width:100%;accent-color:#6ee7a8}
+.balls{display:flex;gap:6px;flex-wrap:wrap}
+.balls button{background:#1b2232;border:1px solid #2c3650;color:#cfd7e6;padding:8px 12px;border-radius:10px;font-size:13px}
+.balls button.on{background:#6ee7a8;color:#08110b;font-weight:700}
+button{border:none;border-radius:10px;padding:11px 16px;font-size:15px;background:#2b3category;color:#fff}
+button{background:#2b3650;color:#e8ecf4}
+button.big{flex:1;background:#ef6a5a;font-weight:700;font-size:17px}
+button.ghost{background:#1b2232;color:#9fb0c9}
+.unotop{display:flex;gap:14px;align-items:center;margin-bottom:12px}
+.card{width:62px;height:92px;border-radius:9px;display:flex;align-items:center;justify-content:center;font-weight:800;font-size:22px;color:#fff;box-shadow:0 3px 8px #0007;flex:0 0 auto}
+.card.big{width:80px;height:118px;font-size:28px}
+.card.R{background:#e0413c}.card.G{background:#3ba55d}.card.B{background:#3b7be0}.card.Y{background:#e5b129;color:#3a2b00}
+.card.W{background:linear-gradient(135deg,#e0413c 0 25%,#3ba55d 0 50%,#3b7be0 0 75%,#e5b129 0)}
+.hand{display:flex;gap:8px;overflow-x:auto;padding:8px 0}
+.turn{margin-top:6px;font-weight:700;color:#6ee7a8}
+.fgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin:12px 0}
+.fgrid div{background:#1b2232;padding:13px 0;text-align:center;border-radius:8px;font-variant-numeric:tabular-nums}
+.findhead{font-size:19px}
+.chatbox{height:58vh;overflow:auto;background:#141a26;border-radius:10px;padding:10px;font-size:14px}
+.chatbox p{margin:4px 0}.chatbox b{color:#6ee7a8}
+#mchatin{flex:1;background:#1b2232;border:none;color:#fff;padding:11px;border-radius:10px}
+
+/* ---------- JOIN ---------- */
+#join{position:fixed;inset:0;background:#0d1018;display:none;align-items:center;justify-content:center;z-index:50;color:#e8ecf4}
+#join.show{display:flex}
+.jbox{background:#161b26;padding:26px;border-radius:16px;width:min(92vw,380px)}
+.jbox h2{margin:0 0 16px}
+.jbox label{display:block;font-size:13px;color:#9fb0c9;margin-bottom:12px}
+.jbox input{width:100%;padding:11px;margin-top:5px;background:#1b2232;border:1px solid #2c3650;color:#fff;border-radius:9px}
+.jbox button{width:100%;background:#6ee7a8;color:#08110b;font-weight:700}
+.jbox .hint{font-size:12px;color:#6f7b8f;margin-top:12px}
