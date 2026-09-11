@@ -7,13 +7,13 @@ body.full #mob{display:flex;flex-direction:column;height:100%}
 
 /* ---------- EXCEL SKIN ---------- */
 #xl{font-size:12px;color:#222;background:#f3f2f1}
-.titlebar{display:flex;align-items:center;gap:14px;background:#217346;color:#fff;padding:4px 10px;font-size:12px}
+.titlebar{display:flex;align-items:center;gap:14px;background:#217346;color:#fff;padding:4px 10px}
 .titlebar .ttl{flex:1;text-align:center}
 .titlebar .win{letter-spacing:6px}
 .ribbon{display:flex;gap:2px;background:#217346;padding:0 8px}
 .ribbon .tab{padding:5px 11px;color:#e8f3ec;font-size:12px}
 .ribbon .tab.act{background:#f3f2f1;color:#217346;border-radius:4px 4px 0 0}
-.ribbonbody{display:flex;gap:0;background:#f3f2f1;border-bottom:1px solid #d6d6d6;padding:6px 8px}
+.ribbonbody{display:flex;background:#f3f2f1;border-bottom:1px solid #d6d6d6;padding:6px 8px}
 .grp{padding:0 14px;border-right:1px solid #e1e1e1;font-size:11px;color:#555;min-width:110px}
 .grp b{display:block;color:#888;font-weight:400;font-size:10px;margin-top:16px}
 .fbar{display:flex;align-items:center;gap:6px;background:#fff;border-bottom:1px solid #d6d6d6;padding:3px 6px}
@@ -39,6 +39,9 @@ body.full #mob{display:flex;flex-direction:column;height:100%}
 #chartbox{position:absolute;right:18px;bottom:14px;width:470px;background:#fff;border:1px solid #d9d9d9;padding:6px 8px 4px;opacity:.9}
 #chartbox .ctitle{font-size:10.5px;color:#7a7a7a;text-align:center;margin-bottom:2px}
 #chartbox .cfoot{font-size:9.5px;color:#9a9a9a;text-align:center}
+#qrwrap{display:none;position:absolute;right:8px;top:6px;background:#fff;border:1px solid #e2e2e2;padding:4px;text-align:center}
+#qrwrap.show{display:block}
+#qrwrap .qcap{font-size:8px;color:#9a9a9a;margin-top:2px;letter-spacing:.5px}
 body.boss #chartbox{display:none}
 body.boss #grid td.hot,body.boss #grid td.play{background:none}
 .tabs{display:flex;align-items:center;gap:3px;background:#f3f2f1;border-top:1px solid #d6d6d6;padding:3px 8px;font-size:11px}
@@ -48,12 +51,14 @@ body.boss #grid td.hot,body.boss #grid td.play{background:none}
 .status{display:flex;gap:18px;align-items:center;background:#f3f2f1;border-top:1px solid #d6d6d6;padding:3px 10px;font-size:11px;color:#444}
 .status .right{margin-left:auto;letter-spacing:2px}
 
-/* ---------- MOBILE SKIN ---------- */
+/* ---------- MOBILE ---------- */
 #mob{background:#10131a;color:#e8ecf4;font-size:15px}
 #mob header{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:#161b26}
+#mob .hgrp{display:flex;gap:8px;align-items:center}
 #mob .sc{background:#222a3a;padding:4px 12px;border-radius:20px;font-weight:700}
+button.tiny{padding:5px 11px;font-size:12px;background:#2b3650;color:#cfd7e6;border-radius:14px}
 #mtabs{display:flex;background:#161b26;border-bottom:1px solid #232b3b}
-#mtabs button{flex:1;background:none;border:none;color:#8e99ad;padding:11px 0;font-size:13px}
+#mtabs button{flex:1;background:none;border:none;color:#8e99ad;padding:11px 0;font-size:13px;border-radius:0}
 #mtabs button.on{color:#6ee7a8;border-bottom:2px solid #6ee7a8}
 .pane{display:none;flex:1;overflow:auto;padding:12px}
 .pane.on{display:block}
@@ -65,8 +70,7 @@ input[type=range]{width:100%;accent-color:#6ee7a8}
 .balls{display:flex;gap:6px;flex-wrap:wrap}
 .balls button{background:#1b2232;border:1px solid #2c3650;color:#cfd7e6;padding:8px 12px;border-radius:10px;font-size:13px}
 .balls button.on{background:#6ee7a8;color:#08110b;font-weight:700}
-button{border:none;border-radius:10px;padding:11px 16px;font-size:15px;background:#2b3category;color:#fff}
-button{background:#2b3650;color:#e8ecf4}
+button{border:none;border-radius:10px;padding:11px 16px;font-size:15px;background:#2b3650;color:#e8ecf4}
 button.big{flex:1;background:#ef6a5a;font-weight:700;font-size:17px}
 button.ghost{background:#1b2232;color:#9fb0c9}
 .unotop{display:flex;gap:14px;align-items:center;margin-bottom:12px}
@@ -76,6 +80,10 @@ button.ghost{background:#1b2232;color:#9fb0c9}
 .card.W{background:linear-gradient(135deg,#e0413c 0 25%,#3ba55d 0 50%,#3b7be0 0 75%,#e5b129 0)}
 .hand{display:flex;gap:8px;overflow-x:auto;padding:8px 0}
 .turn{margin-top:6px;font-weight:700;color:#6ee7a8}
+.wild{display:none;gap:6px;align-items:center;flex-wrap:wrap;background:#1b2232;padding:9px;border-radius:10px;font-size:13px}
+.wild.show{display:flex}
+.wild button{padding:8px 12px;font-size:13px}
+.wR{background:#e0413c}.wG{background:#3ba55d}.wB{background:#3b7be0}.wY{background:#e5b129;color:#3a2b00}
 .fgrid{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;margin:12px 0}
 .fgrid div{background:#1b2232;padding:13px 0;text-align:center;border-radius:8px;font-variant-numeric:tabular-nums}
 .findhead{font-size:19px}
@@ -92,3 +100,5 @@ button.ghost{background:#1b2232;color:#9fb0c9}
 .jbox input{width:100%;padding:11px;margin-top:5px;background:#1b2232;border:1px solid #2c3650;color:#fff;border-radius:9px}
 .jbox button{width:100%;background:#6ee7a8;color:#08110b;font-weight:700}
 .jbox .hint{font-size:12px;color:#6f7b8f;margin-top:12px}
+.jerr{display:none;background:#3a1d1d;color:#ff9c8f;padding:9px;border-radius:8px;font-size:13px;margin-bottom:12px}
+.jerr.show{display:block}
